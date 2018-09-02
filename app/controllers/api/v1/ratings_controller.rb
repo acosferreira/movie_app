@@ -3,7 +3,6 @@ class Api::V1::RatingsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    byebug
     render json: Rating.all
   end
 

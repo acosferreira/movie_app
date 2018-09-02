@@ -1,6 +1,6 @@
 class Api::V1::CategoriesController < ApplicationController
 
-  before_action  :authenticate_user!,  :except => [:index, :search]
+  #before_action  :authenticate_user!,  :except => [:index, :search]
   skip_before_action :verify_authenticity_token
 
   def index
@@ -10,6 +10,8 @@ class Api::V1::CategoriesController < ApplicationController
   def create
     category = Category.create!(category_params)
     render json: category
+  rescue Exception =>exc
+    render json: { status: :error, message: exc.message }
   end
 
   def destroy
