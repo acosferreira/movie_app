@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2018_09_02_013904) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -27,8 +26,6 @@ ActiveRecord::Schema.define(version: 2018_09_02_013904) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_movies_on_category_id"
-    t.index ["user_id"], name: "index_movies_on_user_id"
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -38,7 +35,6 @@ ActiveRecord::Schema.define(version: 2018_09_02_013904) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["movie_id"], name: "index_ratings_on_movie_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -3,8 +3,8 @@ class CreateMovies < ActiveRecord::Migration[5.2]
     create_table :movies do |t|
       t.string :title
       t.text :description
-      t.references :category, foreign_key: true
-      t.references :user, foreign_key: true
+      t.integer :category_id, foreign_key: true
+      t.integer :user_id, foreign_key: true
 
       t.timestamps
     end
