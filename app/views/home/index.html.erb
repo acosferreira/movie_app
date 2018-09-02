@@ -1,0 +1,12 @@
+<div>
+  <span>
+    <% if current_user.present?%>
+    <%= current_user.email%> |
+    <%= link_to 'SignOut', '/users/sign_out'%>
+    <%else%>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+    <%end%>
+  </span>
+
+</div>
+<%= react_component 'Main' %>
