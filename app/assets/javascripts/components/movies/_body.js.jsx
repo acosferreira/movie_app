@@ -5,6 +5,7 @@ class Body extends React.Component {
     this.state = {
       movies: [],
       categories: [],
+      current_user: [],
       page: 0,
       pages: 0
     };
@@ -21,6 +22,7 @@ class Body extends React.Component {
 
   }
 
+
   getAllCategories(){
     fetch('/api/v1/categories.json')
     .then((response) => {return response.json()})
@@ -34,7 +36,6 @@ class Body extends React.Component {
   }
 
   handleCategorySearch(events) {
-  debugger
     fetch(`http://localhost:3000/api/v1/categories/search?query=${events}`
       ).then((response) => {return response.json()})
       .then((data) => {this.setState({ movies: data }) });

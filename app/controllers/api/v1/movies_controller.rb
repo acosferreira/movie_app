@@ -5,6 +5,7 @@ class Api::V1::MoviesController < ApplicationController
 
   def index
     render json: Movie.all, methods: [:rating_average]
+
   end
 
   def create

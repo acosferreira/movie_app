@@ -37,8 +37,7 @@ const Star = ({ selected=false, onClick=f=>f }) =>
    }
 
    addNewRating(rating){
-   debugger
-     this.setState({
+      this.setState({
        ratings: this.state.rating.concat(rating)
      })
    }

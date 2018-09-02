@@ -4,7 +4,7 @@ constructor(props) {
   super(props);
   this.state = {
     currentPage: 1,
-    todosPerPage: 3
+    todosPerPage: 10
   };
   this.handleClick = this.handleClick.bind(this);
 }
