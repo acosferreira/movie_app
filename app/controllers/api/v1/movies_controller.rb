@@ -1,6 +1,6 @@
 class Api::V1::MoviesController < ApplicationController
 
-  #before_action  :authenticate_user!,  :except => [:index, :search]
+  before_action  :authenticate_user!,  :except => [:index, :search]
   skip_before_action :verify_authenticity_token
 
   def index
