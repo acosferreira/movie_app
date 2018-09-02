@@ -24,7 +24,7 @@ const Star = ({ selected=false, onClick=f=>f }) =>
    let body = JSON.stringify({rating: {value: rating_ins.value,
                                       movie_id: rating_ins.movie_id,
                                       user_id: rating_ins.user_id} })
-   fetch('http://localhost:3000/api/v1/ratings', {
+   fetch('/api/v1/ratings', {
      method: 'POST',
      headers: {
        'Content-Type': 'application/json'

@@ -30,13 +30,13 @@ class Body extends React.Component {
   }
 
   handleSearch(events) {
-    fetch(`http://localhost:3000/api/v1/movies/search?query=${events}`
+    fetch(`/api/v1/movies/search?query=${events}`
       ).then((response) => {return response.json()})
       .then((data) => {this.setState({ movies: data }) });
   }
 
   handleCategorySearch(events) {
-    fetch(`http://localhost:3000/api/v1/categories/search?query=${events}`
+    fetch(`/api/v1/categories/search?query=${events}`
       ).then((response) => {return response.json()})
       .then((data) => {this.setState({ movies: data }) });
   }
@@ -46,7 +46,7 @@ class Body extends React.Component {
                                        description: description,
                                        category_id: category,
                                        user_id: user} })
-    fetch('http://localhost:3000/api/v1/movies', {
+    fetch('/api/v1/movies', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ class Body extends React.Component {
   }
 
    handleDelete(id){
-    fetch(`http://localhost:3000/api/v1/movies/${id}`,
+    fetch(`/api/v1/movies/${id}`,
     {
       method: 'DELETE',
       headers: {
@@ -85,7 +85,7 @@ class Body extends React.Component {
   }
 
   handleUpdate(movie){
-    fetch(`http://localhost:3000/api/v1/movies/${movie.id}`,
+    fetch(`/api/v1/movies/${movie.id}`,
     {
       method: 'PUT',
       body: JSON.stringify({movie: movie}),
@@ -105,7 +105,7 @@ class Body extends React.Component {
   }
 
   handleChangePage(page) {
-  fetch(`http://localhost:3000/api/v1/movies?page=${page}`
+  fetch(`/api/v1/movies?page=${page}`
     ).then((response) => {return response.json()})
     .then((data) => {this.setState({ movies: data });
   })
