@@ -20,8 +20,8 @@ Separate react components to front-app to be more flexible and testable
 ### How to use the system
 * If you not logged, you'll be able to see the dashboard, made the navigation
 * If you are logged, you'll be able to manage all context from system, even add, edit, delete and read data
-* The system are available on heroku and can be accessed by: https://aqueous-sea-10432.herokuapp.com/
-* To make a login https://aqueous-sea-10432.herokuapp.com/users/sign_in
+* The system are available on heroku and can be accessed by: https://vast-reef-17818.herokuapp.com/
+* To make a login https://vast-reef-17818.herokuapp.com/users/sign_in
 - **email:** admin@riskmethod.com
 - **password:** 123456
 
