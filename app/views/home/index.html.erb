@@ -2,9 +2,9 @@
   <span>
     <% if current_user.present?%>
     <%= current_user.email%> |
-    <%= link_to 'SignOut', '/users/sign_out'%>
+    <%= link_to 'SignOut', destroy_user_session_path, method: :delete%>
     <%else%>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+    <%= link_to "Log in", new_user_session_path %>
     <%end%>
   </span>
 
