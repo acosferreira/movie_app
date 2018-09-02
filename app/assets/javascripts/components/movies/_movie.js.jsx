@@ -16,7 +16,7 @@ class Movie extends React.Component{
       let rating = this.props.movie.rating_average
       let movie = {id: id, title: title, description: description}
       this.props.handleUpdate(movie)
-      this.props.handleRatingCreate()
+      
     }
     this.setState({
       editable: !this.state.editable
@@ -24,7 +24,7 @@ class Movie extends React.Component{
   }
 
   render(){
-  
+
     let title = this.state.editable ? <input type='text' ref={input => this.title = input} defaultValue={this.props.movie.title}/>:<p>{this.props.movie.title}</p>
     let description = this.state.editable ? <input type='text' ref={input => this.description = input} defaultValue={this.props.movie.description}/>:<p>{this.props.movie.description}</p>
     let rating = this.state.editable ? <input type='text' ref={input => this.rating_average = input} defaultValue={this.props.movie.rating_average}/>:<p>{this.props.movie.rating_average

@@ -17,10 +17,12 @@ const Star = ({ selected=false, onClick=f=>f }) =>
    handleRating(movie, rating)
    {
     let rating_ins = {movie_id: movie.id, value: rating, user_id: 1 }
+    debugger
     this.handleRatingCreate(rating_ins)
    }
 
    handleRatingCreate(rating_ins){
+   debugger
    let body = JSON.stringify({rating: {value: rating_ins.value,
                                       movie_id: rating_ins.movie_id,
                                       user_id: rating_ins.user_id} })
@@ -37,8 +39,9 @@ const Star = ({ selected=false, onClick=f=>f }) =>
    }
 
    addNewRating(rating){
+   debugger
       this.setState({
-       ratings: this.state.rating.concat(rating)
+       ratings: this.props.movie.rating_average
      })
    }
 

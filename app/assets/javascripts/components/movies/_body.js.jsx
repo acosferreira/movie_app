@@ -5,7 +5,6 @@ class Body extends React.Component {
     this.state = {
       movies: [],
       categories: [],
-      current_user: [],
       page: 0,
       pages: 0
     };
